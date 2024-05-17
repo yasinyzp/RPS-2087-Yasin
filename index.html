@@ -1,17 +1,75 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- insert bootstrap link -->
+    <link rel="stylesheet" href="./style/bootstrap/bootstrap.css">
     <!-- styles -->
     <link rel="stylesheet" href="./style/style.css" />
-    <!-- insert bootstrap link -->
     <!-- title -->
     <title>Rock Paper Scissor</title>
   </head>
-  <body>
+  <body class="px-md-5 px-2">
+    
     <!-- scripts -->
     <script src="./script/main.js"></script>
+    <main class="h-100 flex-column align-items-center text-white justify-content-center" id="main">
+      <h1 class="my-5">Rock Paper Scissors</h1>
+      <button class="text-white rounded-3 col-4 col-sm-3 col-md-2 my-3 py-1" type="button" id="singleMode">SinglePlayer</button>
+      <button class="text-white rounded-3 col-4 col-sm-3 col-md-2 my-3 py-1" type="button" id="multiMode">MultiPlayer</button>
+    </main>
+
+    <main class="main_1 flex-column align-items-center text-white" id="main_1">
+      <div class="d-flex align-items-center w-100">
+        <h1 class="my-3 text-center w-100" id="headBoard">Rock Paper Scissors</h1>
+        <button class="position-absolute col-2 col-md-1 border-3 border-white rounded-3 text-white py-1" type="button" id="back_1">BACK</button>
+      </div>
+      <h2 class="my-3" id="scoreBoard">You 0 : 0 Ai</h2>
+      <h3 class="my-3" id="turnBoard">Your Turn !</h3>
+      <div class="my-5 d-flex">
+        <div class="px-5 d-flex flex-column align-items-center form-check">
+          <img class="img-fluid" src="./assets/images/paper.png" alt="paper">
+          <input class="mx-0 mt-5 form-check-input" type="radio" name="flexRadioDefault" id="radio_paper">
+        </div>
+        <div class="p-0 d-flex flex-column align-items-center form-check">
+          <img class="img-fluid" src="./assets/images/scissors.png" alt="scissors">
+          <input class="mx-0 mt-5 form-check-input" type="radio" name="flexRadioDefault" id="radio_scissors">
+        </div>
+        <div class="px-5 d-flex flex-column align-items-center form-check">
+          <img class="img-fluid" src="./assets/images/rock.png" alt="rock">
+          <input class="mx-0 mt-5 form-check-input" type="radio" name="flexRadioDefault" id="radio_rock">
+        </div>
+      </div>
+      <button class="col-3 col-sm-2 border-3 border-white rounded-3 text-white py-1" type="button" id="button">START</button>
+    </main>
+
+    <main class="main_2 flex-column align-items-center text-white" id="main_2">
+      <div class="d-flex align-items-center w-100">
+        <h1 class="my-3 text-center w-100" id="headBoardMulti">Rock Paper Scissors</h1>
+        <button class="position-absolute col-2 col-md-1 border-3 border-white rounded-3 text-white py-1" type="button" id="back_2">BACK</button>
+      </div>
+      <h2 class="my-3" id="scoreBoardMulti">Player 1 --- 0 : 0 --- Player 2</h2>
+      <h3 class="my-3" id="turnBoardMulti">START</h3>
+      <div class="row d-flex my-5 justify-content-between w-100">
+        <div class="col-md-6 d-flex flex-column align-items-center">
+          <div class="col-12 d-flex player1 p-sm-5 py-5 rounded-5 justify-content-between">
+            <img class="img-fluid" src="./assets/images/paper.png" alt="paper">
+            <img class="img-fluid" src="./assets/images/scissors.png" alt="scissors">
+            <img class="img-fluid" src="./assets/images/rock.png" alt="rock">
+          </div>
+          <h3 class="mt-5" id="player1Select"></h3>
+        </div>
+        <div class="col-md-6 d-flex flex-column align-items-center">
+          <div class="col-12 d-flex player2 p-sm-5 py-5 rounded-5 justify-content-between">
+            <img class="img-fluid" src="./assets/images/paper.png" alt="paper">
+            <img class="img-fluid" src="./assets/images/scissors.png" alt="scissors">
+            <img class="img-fluid" src="./assets/images/rock.png" alt="rock">
+          </div>
+          <h3 class="mt-5" id="player2Select"></h3>
+        </div>
+      </div>
+    </main>
+
   </body>
 </html>
